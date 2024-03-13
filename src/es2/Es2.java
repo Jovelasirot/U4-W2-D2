@@ -7,12 +7,12 @@ public class Es2 {
 
         int n = 10;
 
-        List<Integer> rdmLIst = generateRdnList(n);
-        System.out.println("Random number list: " + rdmLIst);
+        List<Integer> rdmList = generateRdmList(n);
+        System.out.println("Random number list: " + rdmList);
 
-        System.out.println("Ordered list: " + orderRdmList(rdmLIst));
+        System.out.println("Ordered list: " + orderRdmList(rdmList));
 
-        List<Integer> invertedList = invertList(rdmLIst);
+        List<Integer> invertedList = invertList(rdmList);
         System.out.println("Inverted list: " + invertedList);
 
 
@@ -26,13 +26,13 @@ public class Es2 {
             default -> throw new IllegalArgumentException(handleEvenOdd + " is a invalid input");
         };
 
-        printEvenOrOdd(rdmLIst, printEven);
+        printEvenOrOdd(rdmList, printEven);
 
 
         sc.close();
     }
 
-    public static List<Integer> generateRdnList(int n) {
+    public static List<Integer> generateRdmList(int n) {
         List<Integer> rdmLIst = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             Random rdm = new Random();
